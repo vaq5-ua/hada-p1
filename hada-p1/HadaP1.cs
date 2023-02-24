@@ -38,5 +38,15 @@ namespace hada_p1
             double sec = m * 60;
             return sec;
         }
+        /// <summary>
+        /// Esta funcion recibe por parametro una cantidad determinada de horas y lo convierte a minutos.
+        /// </summary>
+        /// <param name="h"></param>
+        /// <returns></returns>
+        public static double Hours2Minutes(double h)
+        {
+            double min = h * 60;
+            return min;
+        }
     }
 }
