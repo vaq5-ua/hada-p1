@@ -17,7 +17,15 @@ namespace hada_p1
                 String unidad = Console.ReadLine();
                 Console.WriteLine("Introduce cantidad");
                 Double cantidad = double.Parse(Console.ReadLine());
+                if(unidad == "segundos"){
+                    Console.WriteLine(HadaP1.Seconds2Minutes(cantidad) + " Minutos");
+                }
+                else{
+                    Console.WriteLine(HadaP1.Minutes2Seconds(cantidad) + " Segundos");
+                }
+
                 Console.WriteLine("Desea continuar? (si/no)");
+
                 ans = Console.ReadLine();
             } while (ans == "si");
         }
