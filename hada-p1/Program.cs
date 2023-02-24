@@ -13,15 +13,21 @@ namespace hada_p1
             String ans;
             do
             {
-                Console.WriteLine("Introduce unidad (segundos/minutos)");
-                String unidad = Console.ReadLine();
+                String unidad;
+                do {
+                    Console.WriteLine("Introduce unidad (segundos/minutos/horas)");
+                    unidad = Console.ReadLine();
+                } while (unidad != "segundos" && unidad != "minutos" && unidad != "horas");
                 Console.WriteLine("Introduce cantidad");
                 Double cantidad = double.Parse(Console.ReadLine());
                 if(unidad == "segundos"){
                     Console.WriteLine(HadaP1.Seconds2Minutes(cantidad) + " Minutos");
                 }
-                else{
+                else if(unidad == "minutos"){
                     Console.WriteLine(HadaP1.Minutes2Seconds(cantidad) + " Segundos");
+                }
+                else{
+                    Console.WriteLine(HadaP1.Hours2Minutes(cantidad) + " Minutos");
                 }
 
                 Console.WriteLine("Desea continuar? (si/no)");
